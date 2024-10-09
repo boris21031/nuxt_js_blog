@@ -4,7 +4,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@element-plus/nuxt',
-    '@nuxtjs/axios',
   ],
 
   css: [
@@ -15,6 +14,8 @@ export default defineNuxtConfig({
     baseURL: 'http://localhost:80', // Устанавливаем базовый URL для всех запросов
   },
 
-
   compatibilityDate: '2024-09-16'
 })
+
+
+

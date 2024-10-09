@@ -1,23 +1,23 @@
-# Используем официальный Node.js образ
-FROM node:16
+# Use the official Node.js image with a compatible version
+FROM node:18
 
-# Устанавливаем рабочую директорию
+# Set the working directory
 WORKDIR /app
 
-# Копируем package.json и package-lock.json
+# Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Устанавливаем зависимости
+# Install dependencies
 RUN npm install
 
-# Копируем остальные файлы проекта
+# Copy the rest of the project files
 COPY . .
 
-# Собираем проект
+# Build the project
 RUN npm run build
 
-# Указываем команду для запуска приложения
+# Specify the command to run the application
 CMD ["npm", "start"]
 
-# Указываем порт, который будет использоваться
+# Expose the port the app runs on
 EXPOSE 3000
