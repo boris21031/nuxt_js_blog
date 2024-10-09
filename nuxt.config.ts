@@ -3,12 +3,18 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@element-plus/nuxt'
+    '@element-plus/nuxt',
+    '@nuxtjs/axios',
   ],
 
   css: [
     '~/main.css'
   ],
+
+  axios: {
+    baseURL: 'http://localhost:80', // Устанавливаем базовый URL для всех запросов
+  },
+
 
   compatibilityDate: '2024-09-16'
 })
