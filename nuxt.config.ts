@@ -10,10 +10,6 @@ export default defineNuxtConfig({
     '~/main.css'
   ],
 
-  axios: {
-    baseURL: 'http://localhost:80', // Устанавливаем базовый URL для всех запросов
-  },
-
   compatibilityDate: '2024-09-16'
 })
 
